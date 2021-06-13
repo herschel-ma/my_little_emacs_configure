@@ -1,0 +1,128 @@
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+ls
+go run main.go 
+go run main.go 
+go run main.go 
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit 
+go run main.go 
+exit 
+ls
+go run main.go 
+exit 
+go run main.go
+exit
+go run main.go
+exit
+go run main.go 
+exit
+cd learn_map_reduce/
+go run main.go
+exit
+cd learn_map_reduce/
+ls
+exit
+go run main.go
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+ls
+exit
+go mod int
+go mod init map_reduce
+exit
+mkdir main
+mv main.go main/
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+ls 
+go run main/main.go 
+exit
+go run main/main.go 
+exit
+ls 
+go run main/main.go 
+exit
+go run main/main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+go run main/main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+cd learn_map_reduce/
+go run main/main.go 
+exit
+go run main/main.go 
+go run main.go 
+exit
+ls
+go run main.go 
+exit
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+exit
+go run main.go 
+go run main.go 
+go mod init
+go run main.go 
+go run main.go 
+cat go.mod 
+rm go.mod 
+go mod init learn_ioc
+go run main.go 
+exit
+go run main.go 
+rm go.mod 
+go run main.go 
+go mod init main
+go run main.go 
+rm go.mod 
+exit
+go run main.go 
+exit
