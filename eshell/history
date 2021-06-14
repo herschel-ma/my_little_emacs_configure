@@ -1,4 +1,3 @@
-exit
 go run main.go 
 exit
 go run main.go 
@@ -126,3 +125,4 @@ rm go.mod
 exit
 go run main.go 
 exit
+sudo apt install stardict sdcv -y
