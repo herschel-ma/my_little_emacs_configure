@@ -202,8 +202,33 @@
   ;; corrects (and improves) org-mode's native fontification
   (doom-themes-org-config))
 
-
-
+;; sdcv to translate word
+;; expand path where to load dict
+(defvar herschel-emacs-sdcv-data-dir
+  "~/.stardict/dic")
+(use-package sdcv
+  :config
+  (setq sdcv-dictionary-simple-list
+	'(
+	  "KDic11万英汉词典"
+	  "朗道英汉字典5.0"
+	  "朗道汉英字典5.0"))
+  (setq sdcv-dictionary-complete-list      ;; a complete dictionary list
+        '("KDic11万英汉词典"
+          "朗道英汉字典5.0"
+          "朗道汉英字典5.0"
+          "英汉汉英专业词典"
+          "中国大百科全书2.0版"
+	  "CET4"
+	  "CET6"
+	  "CEDICT汉英辞典"
+	  "计算机词汇"
+	  "21世纪双语科技词典"
+          ))
+  (setq sdcv-dictionary-data-dir herschel-emacs-sdcv-data-dir) ;设置星际译王本地词典的目录
+)
+(require 'company-english-helper)
+(toggle-company-english-helper)
 ;; games :)
 (use-package minesweeper)
 (use-package pacmacs)

@@ -11,7 +11,8 @@
 ;; gruvbox-dark-soft-theme
 ;(use-package monokai-theme
 ;:init (load-theme 'monokai t))
-(load-theme 'tango t)
+;; (load-theme 'tango t)
+(load-theme 'doom-vibrant t)
 (require 'all-the-icons)
 (use-package smart-mode-line
   :init
