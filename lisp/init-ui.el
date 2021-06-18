@@ -13,7 +13,7 @@
 ;:init (load-theme 'monokai t))
 ;; (load-theme 'tango t)
 (load-theme 'doom-vibrant t)
-(require 'all-the-icons)
+(use-package all-the-icons)
 (use-package smart-mode-line
   :init
   (setq sml/no-confirm-load-theme t)
@@ -38,8 +38,13 @@
 	(dolist (charset '(kana han symbol cjk-misc bopomofo))
 	  (set-fontset-font (frame-parameter nil 'font)
 			    charset (font-spec :family "Microsoft Yahei Mono" :size 12))))
-  ;; 更改字体大小 16pt
-  (set-face-attribute 'default nil :height 160)))
+    ;; 更改字体大小 14pt
+    ;; sudo apt install fonts-cascadia-code
+    (set-face-attribute 'default nil :font "Cascadia Code" :height 140)
+    ;; Set the fixed pitch face
+    (set-face-attribute 'fixed-pitch nil :font "Cascadia Code" :height 150)
+    ;; Set the variable pitch face
+    (set-face-attribute 'variable-pitch nil :font "Cascadia Code" :height 155 :weight 'regular)))
 
 ;; 显示行号
 (use-package emacs
@@ -47,6 +52,12 @@
     :config
     (setq display-line-numbers-type 'relative)
     (global-display-line-numbers-mode t))
+
+;; Disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 ;; 显示匹配括号
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)

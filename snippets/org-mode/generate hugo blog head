@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: generate hugo blog head
+# key: hugot
+# --
+#+hugo_base_dir:../myblog/
+#+hugo_section:./zh/posts
+#+hugo_auto_set_lastmod: t
+#+title:${1: title}
+#+date:${2: date}
+#+hugo_draft: false
+#+hugo_custom_front_matter: :hideToc false :enableToc true :enableTocContent true :pinned false :image images/JVM/
+#+hugo_author: Herschel
+#+hugo_tags:${3:jvm|org}
+#+hugo_series:
+#+hugo_categories:${4: python}

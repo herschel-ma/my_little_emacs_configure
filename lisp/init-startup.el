@@ -20,7 +20,7 @@
 
 ;; 关闭菜单栏
 (menu-bar-mode -1)
-
+(set-fringe-mode 10)        ; Give some breathing room
 ;; 禁用自动生成备份文件
 (setq-default make-backup-files nil)
 

@@ -96,8 +96,21 @@
 ;; 交换字符 C-t 交换单词 M-t
 
 (use-package which-key
-  :defer nil
-  :config (which-key-mode))
+  :init (which-key-mode)
+  :diminish which-key-mode
+  :config
+  (setq which-key-idle-delay 0.3))
+
+(use-package helpful
+  :custom
+  (counsel-describe-function-function #'helpful-callable)
+  (counsel-describe-variable-function #'helpful-variable)
+  :bind
+  ([remap describe-function] . counsel-describe-function)
+  ([remap describe-command] . helpful-command)
+  ([remap describe-variable] . counsel-describe-variable)
+  ([remap describe-key] . helpful-key))
+
 ;; 窗口管理之MiniBuffer交互优化
 (use-package ivy-posframe
   :init
@@ -229,7 +242,24 @@
 )
 (require 'company-english-helper)
 (toggle-company-english-helper)
+
+;; Rainbow delimiters
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
+
+;; ox-hugo
+(use-package ox-hugo
+  :ensure t            ;Auto-install the package from Melpa (optional)
+  :after ox)
+
+(use-package yasnippet
+  :config
+  (setq yas-snippet-dirs
+	'("~/.emacs.d/snippets"))
+  :hook (after-init . yas-global-mode))
+(provide 'init-packages)
 ;; games :)
+;; builtin gomoku
 (use-package minesweeper)
 (use-package pacmacs)
 (use-package fireplace)

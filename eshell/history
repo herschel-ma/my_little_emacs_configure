@@ -4,8 +4,6 @@ go run main.go
 exit
 go run main.go 
 exit
-go run main.go 
-exit
 ls
 go run main.go 
 go run main.go 
@@ -126,3 +124,5 @@ exit
 go run main.go 
 exit
 sudo apt install stardict sdcv -y
+ls
+exit

@@ -3,14 +3,9 @@
 ;;; --- vim mode
 ;;; Code:
 ;; meow
-(defun meow-setup ()
+(defun  meow-setup ()
   (setq meow-cheatsheet-physical-layout meow-cheatsheet-physical-layout-ansi)
-  (setq meow-cheatsheet-layout meow-cheatsheet-layout-dvp)
-  (setq-default meow-replace-state-name-list
-		'((normal . "Ꮚ•-•Ꮚ")
-		  (insert . "Ꮚ`-´Ꮚ")
-		  (keypad . "Ꮚ'-'Ꮚ")
-		  (motion . "Ꮚ-^-Ꮚ")))
+  (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
   (meow-leader-define-key
    '("'" . meow-wrap-string)
    '("(" . meow-wrap-round)
@@ -167,6 +162,22 @@
   (add-to-list 'meow-char-thing-table '(?< . line))
   (meow-setup)
   (meow-setup-indicator))
+
+;; (use-package meow
+;;   :demand nil
+ 
+;;   :config
+;;   (meow-setup)
+;;   (meow-setup-line-number))
+
+;; (require 'meow)
+;; (meow-normal-mode 1)
+;; (setq-default meow-replace-state-name-list
+;; 		'((normal . "Ꮚ•-•Ꮚ")
+;; 		  (insert . "Ꮚ`-´Ꮚ")
+;; 		  (keypad . "Ꮚ'-'Ꮚ")
+;; 		  (motion . "Ꮚ-^-Ꮚ")))
+;; (meow-setup-indicator)
 (provide 'init-meow)
 
 ;;; init-meow.el ends here
