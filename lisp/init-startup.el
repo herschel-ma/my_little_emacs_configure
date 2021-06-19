@@ -26,6 +26,13 @@
 
 ;; 设置打开默认全屏
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
+(defun herschel/display-startup-time ()
+  (message "Emacs loaded in %s with %d garbage collections."
+           (format "%.2f seconds"
+                   (float-time
+                     (time-subtract after-init-time before-init-time)))
+           gcs-done))
 
+(add-hook 'emacs-startup-hook #'herschel/display-startup-time)
 (provide 'init-startup)
 ;;; init-startup ends here

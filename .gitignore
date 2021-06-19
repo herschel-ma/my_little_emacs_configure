@@ -4,3 +4,5 @@ recentf
 session.*
 smex-items
 .lsp-session-v1
+transient
+forge-database.sqlite

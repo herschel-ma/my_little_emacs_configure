@@ -257,7 +257,17 @@
   (setq yas-snippet-dirs
 	'("~/.emacs.d/snippets"))
   :hook (after-init . yas-global-mode))
-(provide 'init-packages)
+
+(use-package magit
+  :commands magit-status
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
+;; NOTE: Make sure to configure a GitHub token before using this package!
+;; - https://magit.vc/manual/forge/Token-Creation.html#Token-Creation
+;; - https://magit.vc/manual/ghub/Getting-Started.html#Getting-Started
+(use-package forge
+  :after magit)
 ;; games :)
 ;; builtin gomoku
 (use-package minesweeper)
