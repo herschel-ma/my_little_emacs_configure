@@ -3,7 +3,7 @@
 ;;;
 ;;; Code:
 
-(add-to-list 'load-path "~/.emacs.d/awesome-pair/") ; add awesome-pair to your load-path
+(add-to-list 'load-path "~/.config/emacs/awesome-pair/") ; add awesome-pair to your load-path
 (require 'awesome-pair)
 (dolist (hook (list
                ;; 'c-mode-common-hook

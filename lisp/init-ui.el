@@ -40,11 +40,11 @@
 			    charset (font-spec :family "Microsoft Yahei Mono" :size 12))))
     ;; 更改字体大小 14pt
     ;; sudo apt install fonts-cascadia-code
-    (set-face-attribute 'default nil :font "Cascadia Code" :height 140)
+    (set-face-attribute 'default nil :font "CaskaydiaCove Nerd Font Light" :height 140)
     ;; Set the fixed pitch face
-    (set-face-attribute 'fixed-pitch nil :font "Cascadia Code" :height 150)
+    (set-face-attribute 'fixed-pitch nil :font "CasKaydiaCove Nerd Font Light" :height 150)
     ;; Set the variable pitch face
-    (set-face-attribute 'variable-pitch nil :font "Cascadia Code" :height 155 :weight 'regular)))
+    (set-face-attribute 'variable-pitch nil :font "CaskaydiaCove Nerd Font Light" :height 155 :weight 'regular)))
 
 ;; 显示行号
 (use-package emacs

@@ -4,7 +4,7 @@
 ;; 输入法
 (require 'rime)
 ;; 设置加载用户安装路径
-(setq rime-user-data-dir "~/.config/ibus/rime")
+(setq rime-user-data-dir "~/.config/ibus/rime/")
 ;; 设置默认输入法为rime, 使用postframe 将提示设置在光标处
 (setq-default default-input-method "rime"
 	      rime-show-candidate 'posframe)
